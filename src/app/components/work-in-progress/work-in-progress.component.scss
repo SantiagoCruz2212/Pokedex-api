@@ -1,0 +1,31 @@
+h1{
+    position: absolute;
+    color: #ffcc01;
+    -webkit-text-stroke: 1px #2b6db6;
+    font-size: 30px;
+    text-shadow: 2px 5px 8px rgba(0, 0, 0, 1);
+}
+.space{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+.tv-program{
+    position: absolute;
+    width: 208px;
+    height: 162px;
+    top: 148px;
+    left: calc( 50% - 138px);
+}
+.tv{
+    position: absolute;
+    width: 340px;
+}
+.pikachu{
+    position: absolute;
+    top: 180px;
+    left: 420px;
+    left: calc(50% - 286px);
+    height: 200px;
+}

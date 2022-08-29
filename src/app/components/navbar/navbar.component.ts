@@ -10,6 +10,10 @@ export class NavbarComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+    const music = (<HTMLAudioElement>document.getElementById('song'));
+      music.loop = true;
+      music.volume = 0.1;
   }
 
 }

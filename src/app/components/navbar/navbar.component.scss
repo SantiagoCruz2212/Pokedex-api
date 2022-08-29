@@ -1,11 +1,17 @@
-img{
+embed{
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    margin: 0px;
+}
+.pokeball{
     position: absolute;
     height: 100px;
     top: -15px;
     left: -10px;
-    animation: animation 2s linear infinite;
+    animation: animation-pb 2s linear infinite;
 }
-@keyframes animation{
+@keyframes animation-pb{
     0% {
         transform: rotate();
         left: -10px;
@@ -20,6 +26,46 @@ img{
         transform: rotate(1080deg);
         left: -10px;
         top: -10px;;
+    }
+}
+.charizard{
+    position: absolute;
+    height: 200px;
+    top: -370px;
+    left: -200px;
+    transform: rotate(20deg);
+    animation: animation-pm 3.5s linear infinite;
+}
+@keyframes animation-pm {
+    16% {
+        left: 50px;
+        top: -160px;
+        transform: rotate(20deg);
+    }
+    33% {
+        left: 350px;
+        top: -110px;
+        transform: rotate(0deg);
+    }
+    49% {
+        left: 700px;
+        top: -110px;
+        transform: rotate(-20deg);
+    }
+    65% {
+        left: 900px;
+        top: -200px;
+        transform: rotate(-40deg);
+    }
+    82% {
+        left: 1000px;
+        top: -370px;
+        transform: rotate(-40deg);
+    }
+    100%{
+        left: 1000px;
+        top: -370px;
+        transform: rotate(-40deg);
     }
 }
 .container a, .container a:active, .container a:checked{
@@ -92,7 +138,7 @@ figure{
     }
 }
 @media (max-width:500px) {
-    img{
+    .pokeball{
         height: 50px;
     }
     .container{
