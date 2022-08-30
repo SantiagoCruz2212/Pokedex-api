@@ -1,9 +1,45 @@
+.arrow{
+    margin-left: 3px;
+    width: 5px;
+    height: 10px;
+    opacity: 0;
+}
 .container{
     position: relative;
     height: calc(100vh - 200px);
     overflow-y: scroll;
     display: flex;
     justify-content: center;
+}
+.ctnr-btn-search{
+    position: absolute;
+    top: 338px;
+    left: 47px;
+}
+.btn-search{
+    border: none;
+    background-color: transparent;
+    color: #8e8e8e;
+    transition: 400ms;
+    padding: 4px 8px 6px 8px;
+}
+.btn-search:hover{
+    transition: 400ms;
+    color: #00ef41;
+}
+.ctnr-photo-pk{
+    position: absolute;
+    top: 139px;
+    left: -227px;
+}
+.flex-search{
+    display: flex;
+    align-items: center;
+}
+.height{
+    position: absolute;
+    top: 328px;
+    left: 50px;
 }
 .open{
     margin: 0px;
@@ -18,19 +54,58 @@
     -webkit-text-stroke: 1.5px #2b6db6;
     animation: animation-btn 1.5s linear infinite;
 }
+.photo-pk{
+    position: absolute;
+    top: -4px;
+    left: 12px;
+    width: 152px;
+    height: 152px;
+}
+.search{
+    top: 138px;
+    left: 52px;
+    width: 178px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.search .ask-search{
+    margin: 0px;
+}
+.weight{
+    position: absolute;
+    top: 328px;
+    left: 148px;
+}
+.search .number-pk, .search .name-pk{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+}
+.search .number-text, .search .name-text{
+    margin: 2px 0px;
+}
+.left-screen, .right-screen, .left-down-screen, .right-screen-down{
+    position: absolute;
+    font-family: 'Silkscreen', cursive;
+    font-size: 14px;
+}
+.ctnr-photo-pk p{
+    position: absolute;
+    top: -4px;
+    margin: 0px;
+}
 .open p{
     transition: 400ms;
     margin: 0px;
 }
-.open p:hover{
-    cursor: pointer;
-    text-shadow: 2px 5px 4px rgba(0, 0, 0, 1);
-    transition: 400ms;
+.right-screen-down p{
+    font-size: 12px;
+    color:  #8e8e8e;
 }
-.left-screen, .right-screen, .left-down-screen{
-    position: absolute;
-    font-family: 'Silkscreen', cursive;
-    font-size: 14px;
+.search input{
+    width: 150px;
 }
 .left-screen button, .right-screen button, .left-down-screen button{
     background-color: transparent;
@@ -46,69 +121,27 @@
     color: #8e8e8e;
     font-size: 14px;
 }
-.right-screen input::-webkit-input-placeholder, .left-screen input::-webkit-input-placeholder{
-    font-family: 'Silkscreen', cursive;
-    font-size: 14px;
-    color: #8e8e8e;
-}
-.search{
-    top: 123px;
-    left: -225px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-}
-.search input{
-    width: 150px;
-}
-.flex-search{
-    display: flex;
-    align-items: center;
-}
-.arrow{
-    width: 5px;
-    height: 10px;
-    opacity: 0;
-}
-
-.search .ask-search{
-    margin: 14px 0px 8px 0px;
-}
-.search .number-pk, .search .name-pk{
-    background-color: transparent;
-    border: none;
-    outline: none;
-    margin-top: 2px;
-}
-.search .number-text, .search .name-text{
-    margin: 2px 0px;
-}
-.btn-search{
-    position: absolute;
-    top: 338px;
-    left: -210px;
-}
-.weight{
-    position: absolute;
-    top: 328px;
-    left: 148px;
-}
-.height{
-    position: absolute;
-    top: 328px;
-    left: 50px;
-}
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; 
+.open p:hover{
+    cursor: pointer;
+    text-shadow: 2px 5px 4px rgba(0, 0, 0, 1);
+    transition: 400ms;
 }
 .flex-search:hover{
     .arrow{
         opacity: 1;
         animation: twinkle 1s linear infinite;
     }
+}
+.right-screen input::-webkit-input-placeholder, .left-screen input::-webkit-input-placeholder{
+    font-family: 'Silkscreen', cursive;
+    font-size: 14px;
+    color: #8e8e8e;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none; 
 }
 @keyframes animation-btn {
     50% {

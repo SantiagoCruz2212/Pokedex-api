@@ -3,9 +3,24 @@
     <section class="container">
         <img class="pokedex" #pokedex id="pokedex" width="300px" height="425px" src="../../../assets/img/Pokedex-close.png" alt="pokedex">
         <button [hidden]="false" (click)="ChangeImg()" id="open" class="open"><p>Press to Open</p></button>
+        
+        
         <section [hidden]="true" id="left-screen" class="left-screen">
-            <section class="search">
-                <p class="ask-search">search for name<br>or id pokemon?</p>
+            <section class="ctnr-photo-pk">
+                <img id="photo-pk" class="photo-pk" src="" alt="">
+                <p id="tittle-name-pk"></p>
+            </section>
+        </section>
+
+        
+        <section [hidden]="true" id="left-down-screen" class="left-down-screen">
+        </section>
+
+
+        <section id="right-screen" class="right-screen">
+            
+            <section [hidden]="true" id="search" class="search">
+                <p class="ask-search">search for name or id pokemon?</p>
                 <section class="flex-search">
                     <img class="btn-img-name arrow" src="../../../assets/img/Arrow.png" alt="">
                     <button class="btn-name" (click)="ChangeStateName()">Name</button>
@@ -21,16 +36,19 @@
                     <input #namepk [hidden]="true" id="name-pk" class="name-pk" type="" placeholder="....">
                 </section>
             </section>
+
+            <section [hidden]="true" id="info-pk" class="info-pk">
+                <p id="info-pk"></p>
+            </section>
         </section>
-        <section [hidden]="true" id="left-down-screen" class="left-down-screen">
-            <button (click)="ShowInfoPokemon(numberpk.value || namepk.value)" class="btn-search">Search</button>
+
+
+        <section id="right-down-screen" class="right-screen-down">
+            <section [hidden]="true" id="ctnr-btn-search" class="ctnr-btn-search">
+                <button (click)="ShowInfoPokemon(numberpk.value || namepk.value)" class="btn-search">Search</button>
+            </section>
         </section>
-        <section [hidden]="true" id="right-screen" class="right-screen">
-        </section>
-        <section [hidden]="true" id="right-down-screen" class="right-screen">
-            <p class="height" id="height">height: </p>
-            <p class="weight" id="weight">weight: </p>
-        </section>
+
+
     </section>
-    <p id="nombrepokemon"></p>
 </section>

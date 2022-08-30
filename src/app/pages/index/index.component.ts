@@ -11,22 +11,17 @@ export class IndexComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
-  // changeimg(src:string){
-  //   src = "../../../assets/img/Pokedex-open.png";
-  //   (<HTMLImageElement>document.get('pokedex'));
-  // }
   ChangeImg(){
     const img = (<HTMLImageElement>document.getElementById('pokedex'));
     img.src = "../../../assets/img/Pokedex-open.png";
     img.width = 544;
     const btn = (<HTMLButtonElement>document.getElementById('open'));
     btn.hidden = true;
-    const l_scr = (<HTMLImageElement>document.getElementById('left-screen'));
-    l_scr.hidden = false;
-    const r_scr = (<HTMLImageElement>document.getElementById('right-screen'));
-    r_scr.hidden = false;
+    const search = (<HTMLImageElement>document.getElementById('search'));
+    search.hidden = false;
   }
   ChangeStateNumber(){
     const name_text = (<HTMLInputElement>document.getElementById('name-text'));
@@ -38,8 +33,9 @@ export class IndexComponent implements OnInit {
     const number_text = (<HTMLInputElement>document.getElementById('number-text'));
     number_text.hidden = false;
     const number = (<HTMLInputElement>document.getElementById('number-pk'));
+    number.value = "";
     number.hidden = false;
-    const search = (<HTMLInputElement>document.getElementById('left-down-screen'));
+    const search = (<HTMLInputElement>document.getElementById('ctnr-btn-search'));
     search.hidden = false;
   }
   ChangeStateName(){
@@ -52,20 +48,30 @@ export class IndexComponent implements OnInit {
     const name_text = (<HTMLInputElement>document.getElementById('name-text'));
     name_text.hidden = false;
     const name = (<HTMLInputElement>document.getElementById('name-pk'));
+    name.value = "";
     name.hidden = false;
-    const btn_search = (<HTMLInputElement>document.getElementById('left-down-screen'));
+    const btn_search = (<HTMLInputElement>document.getElementById('ctnr-btn-search'));
     btn_search.hidden = false;
   }
   async ShowInfoPokemon(pokemon:string){
+    const l_scr = (<HTMLImageElement>document.getElementById('left-screen'));
+    l_scr.hidden = false;
+
     const second_left_screen = (<HTMLInputElement>document.getElementById('right-down-screen'));
     second_left_screen.hidden = false;
-    console.log(pokemon);
-    const res:any = await axios.get("https://pokeapi.co/api/v2/pokemon-form/" + pokemon);
-    console.log(res.data);
+    
+    const info_pk:any = await axios.get("https://pokeapi.co/api/v2/pokemon/" + pokemon);
+    const searched_pk = info_pk.data;
+    
+    console.log("type pokemon:" + searched_pk.types[0].type.name);
+    
+    const photo_pk = (<HTMLImageElement>document.getElementById('photo-pk'));
+    photo_pk.src =  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/" + searched_pk.id + ".gif";
+    photo_pk.hidden = false;
+    const name_pk = (<HTMLInputElement>document.getElementById('tittle-name-pk'));
+    name_pk.innerHTML = searched_pk.forms[0].name;
 
-    const searched_pk = res.data;
-    console.log(searched_pk.pokemon.name);
+    const send_info_pk = (<HTMLInputElement>document.getElementById('info-pk'));
+    send_info_pk.innerHTML ="name: " + searched_pk.forms[0].name + "<br>id: " + searched_pk.id + "<br>type: " + searched_pk.types[0].type.name + "<br>weight: " + searched_pk.weight + "kg<br>height: " + searched_pk.height + "cm";
   }
 }
-// get, post todos me responden algo
-// post me sirve para obtener pero le mando una informacion
