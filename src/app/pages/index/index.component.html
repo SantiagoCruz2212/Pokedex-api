@@ -18,22 +18,23 @@
 
 
         <section id="right-screen" class="right-screen">
-            
-            <section [hidden]="true" id="search" class="search">
-                <p class="ask-search">search for name or id pokemon?</p>
-                <section class="flex-search">
-                    <img class="btn-img-name arrow" src="../../../assets/img/Arrow.png" alt="">
-                    <button class="btn-name" (click)="ChangeStateName()">Name</button>
-                </section>
-                <section class="flex-search">
-                    <img class="btn-img-number arrow" src="../../../assets/img/Arrow.png" alt="">
-                    <button class="btn-number" (click)="ChangeStateNumber()">Number</button>
-                </section>
-                <section>
-                    <p class="number-text" id="number-text" [hidden]="true">Insert Number:</p>
-                    <input #numberpk [hidden]="true" id="number-pk" class="number-pk"  type="number" max="898" min="1" placeholder="....">
-                    <p [hidden]="true" id="name-text" class="name-text">Insert Name:</p>
-                    <input #namepk [hidden]="true" id="name-pk" class="name-pk" type="" placeholder="....">
+            <section [hidden]="true" id="ctnr-search" class="ctnr-search">
+                <section id="search" class="search">
+                    <p class="ask-search">search for name or id pokemon?</p>
+                    <section class="flex-search">
+                        <img class="btn-img-name arrow" src="../../../assets/img/Arrow.png" alt="">
+                        <button class="btn-name" (click)="ChangeStateName()">Name</button>
+                    </section>
+                    <section class="flex-search">
+                        <img class="btn-img-number arrow" src="../../../assets/img/Arrow.png" alt="">
+                        <button class="btn-number" (click)="ChangeStateNumber()">Number</button>
+                    </section>
+                    <section>
+                        <p [hidden]="true" id="number-text" class="number-text">Insert Number:</p>
+                        <input #numberpk [hidden]="true" id="number-pk" class="number-pk"  type="number" max="898" min="1" placeholder="....">
+                        <p [hidden]="true" id="name-text" class="name-text">Insert Name:</p>
+                        <input #namepk [hidden]="true" id="name-pk" class="name-pk" type="" placeholder="....">
+                    </section>
                 </section>
             </section>
 

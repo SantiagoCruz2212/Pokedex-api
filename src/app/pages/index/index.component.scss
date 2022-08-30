@@ -4,6 +4,17 @@
     height: 10px;
     opacity: 0;
 }
+.btn-search{
+    border: none;
+    background-color: transparent;
+    color: #8e8e8e;
+    transition: 400ms;
+    padding: 4px 8px 6px 8px;
+}
+.btn-search:hover{
+    transition: 400ms;
+    color: #00ef41;
+}
 .container{
     position: relative;
     height: calc(100vh - 200px);
@@ -15,17 +26,6 @@
     position: absolute;
     top: 338px;
     left: 47px;
-}
-.btn-search{
-    border: none;
-    background-color: transparent;
-    color: #8e8e8e;
-    transition: 400ms;
-    padding: 4px 8px 6px 8px;
-}
-.btn-search:hover{
-    transition: 400ms;
-    color: #00ef41;
 }
 .ctnr-photo-pk{
     position: absolute;
@@ -40,6 +40,13 @@
     position: absolute;
     top: 328px;
     left: 50px;
+}
+.info-pk{
+    position: absolute;
+    top: 137px;
+    left: 54px;
+    width: 170px;
+    color: #8e8e8e;
 }
 .open{
     margin: 0px;
