@@ -52,12 +52,15 @@ export class IndexComponent implements OnInit {
     const btn_search = (<HTMLInputElement>document.getElementById('ctnr-btn-search'));
     btn_search.hidden = false;
   }
+  OtherSearch(){
+    
+  }
   async ShowInfoPokemon(pokemon:string){
     const search = (<HTMLInputElement>document.getElementById('ctnr-search'));
     search.hidden = true;
     const btn_search = (<HTMLInputElement>document.getElementById('ctnr-btn-search'));
     btn_search.hidden = true;
-
+    
     const info_pk:any = await axios.get("https://pokeapi.co/api/v2/pokemon/" + pokemon);
     const searched_pk = info_pk.data;
     const l_scr = (<HTMLImageElement>document.getElementById('left-screen'));
@@ -66,9 +69,11 @@ export class IndexComponent implements OnInit {
     name_pk.innerHTML = searched_pk.forms[0].name;
     const photo_pk = (<HTMLImageElement>document.getElementById('photo-pk'));
     photo_pk.src =  "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/" + searched_pk.id + ".gif";
-
+    
     const send_info_pk = (<HTMLInputElement>document.getElementById('info-pk'));
     send_info_pk.innerHTML ="name: " + searched_pk.forms[0].name + "<br>id: " + searched_pk.id + "<br>type: " + searched_pk.types[0].type.name + "<br>weight: " + searched_pk.weight + "kg<br>height: " + searched_pk.height + "cm";
     send_info_pk.hidden = false;
+    const new_search = (<HTMLInputElement>document.getElementById('btn-new-search'));
+    new_search.hidden = false;
   }
 }

@@ -42,9 +42,10 @@
                 <p id="info-pk"></p>
             </section>
         </section>
-
-
         <section id="right-down-screen" class="right-screen-down">
+            <section id="new-src" class="ctnr-new-src">
+                <button (click)="OtherSearch()" [hidden]="true" id="btn-new-search" class="btn-new-search">new search</button>
+            </section>
             <section [hidden]="true" id="ctnr-btn-search" class="ctnr-btn-search">
                 <button (click)="ShowInfoPokemon(numberpk.value || namepk.value)" class="btn-search">Search</button>
             </section>
