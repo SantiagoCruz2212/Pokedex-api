@@ -12,12 +12,10 @@ figure{
     border-radius: 30px;
 }
 .charizard{
-position: absolute;
+    position: absolute;
     height: 200px;
-    top: -370px;
-    left: -200px;
     transform: rotate(20deg);
-    animation: animation-pm 3.5s linear infinite;
+    animation: animation-pm 2.5s linear infinite;
 }
 .container{
     padding-top: 70px;
@@ -63,34 +61,39 @@ position: absolute;
     }
 }
 @keyframes animation-pm {
+    0%{
+        left: 0%;
+        top: -35%;
+        transform: rotate(20deg);
+    }
     16% {
-        left: 50px;
-        top: -160px;
+        left: 10%;//54,64 13,66
+        top: -20%;
         transform: rotate(20deg);
     }
     33% {
-        left: 350px;
-        top: -110px;
+        left: 25%;
+        top: -14%;
         transform: rotate(0deg);
     }
     49% {
-        left: 700px;
-        top: -110px;
+        left: 40%;
+        top: -14%;
         transform: rotate(-20deg);
     }
     65% {
-        left: 900px;
-        top: -200px;
+        left: 55%;
+        top: -20%;
         transform: rotate(-40deg);
     }
     82% {
-        left: 1000px;
-        top: -370px;
+        left: 70%;
+        top: -37%;
         transform: rotate(-40deg);
     }
     100%{
-        left: 1000px;
-        top: -370px;
+        left: 70%;
+        top: -40%;
         transform: rotate(-40deg);
     }
 }
@@ -153,3 +156,35 @@ position: absolute;
         -webkit-text-stroke: 0.8px #2b6db6;
     }
 }
+// @keyframes animation-pm {
+//     16% {
+//         left: 50px;
+//         top: -160px;
+//         transform: rotate(20deg);
+//     }
+//     33% {
+//         left: 350px;
+//         top: -110px;
+//         transform: rotate(0deg);
+//     }
+//     49% {
+//         left: 700px;
+//         top: -110px;
+//         transform: rotate(-20deg);
+//     }
+//     65% {
+//         left: 900px;
+//         top: -200px;
+//         transform: rotate(-40deg);
+//     }
+//     82% {
+//         left: 1000px;
+//         top: -370px;
+//         transform: rotate(-40deg);
+//     }
+//     100%{
+//         left: 1000px;
+//         top: -370px;
+//         transform: rotate(-40deg);
+//     }
+// }

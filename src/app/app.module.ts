@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { WorkInProgressComponent } from './components/work-in-progress/work-in-progress.component';
 import { IndexComponent } from './pages/index/index.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { PokedexComponent } from './components/pokedex/pokedex.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WorkInProgressComponent,
     IndexComponent,
-    NavbarComponent
+    NavbarComponent,
+    PokedexComponent
   ],
   imports: [
     BrowserModule,
