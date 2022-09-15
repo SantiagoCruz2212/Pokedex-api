@@ -25,6 +25,12 @@ export class PokedexComponent implements OnInit {
   Open_Pokedex(){
     const cntr_pokedex = (<HTMLDivElement>document.getElementById('cntr-pokedex-open'));
     cntr_pokedex.className = "cntr-pokedex-open rotate-pokedex open-pokedex";
+    setTimeout(() =>{
+      this.Screen_On();
+    }, 2000);
   }
-
+  Screen_On(){
+    const cntr_text = (<HTMLDivElement>document.getElementById('cntr-text'));
+    cntr_text.hidden = false;
+  }
 }
