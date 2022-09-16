@@ -1,26 +1,41 @@
 <section class="container">
     <img [hidden]="false" id="pokedex-closed" class="pokedex-closed" src="../../../assets/img/pokedex/Pokedex-Close.png" alt="">
-    <p id="press" class="press" (click)="Turn_Pokedex()">Press to Open</p>
-    <div class="cntr-pokedex">
-        <div id="cntr-pokedex-open" class="cntr-pokedex-open">
-            <img class="pokedex-up" src="../../../assets/img/pokedex/Pokedex-Open-Up.png" alt="">
-            <img class="pokedex-down" src="../../../assets/img/pokedex/Pokedex-Open-Down.png" alt="">
+    <p id="press" class="press" (click)="Change_Pokedex()">Press to Open</p>
+    <section [hidden]="true" id="cntr-pokedex-opened">
+        <div class="cntr-pokedex">
+            <div id="cntr-pokedex-open" class="cntr-pokedex-open">
+                <img class="pokedex-up" src="../../../assets/img/pokedex/Pokedex-Open-Up.png" alt="">
+                <img class="pokedex-down" src="../../../assets/img/pokedex/Pokedex-Open-Down.png" alt="">
+            </div>
         </div>
-    </div>
+    </section>
     <section [hidden]="true" id="cntr-text" class="cntr-text">
-        <div class="">
+        <div [hidden]="false" id="search" class="search">
             <p>search pokemon for name or id?</p>
-            <div class="opc-search">
+            <div class="opc-search" (click)="ShowInputName()">
                 <img class="btn-img-name arrow" src="../../../assets/img/Arrow.png" alt="">
                 <p>name</p>
             </div>
-            <div class="opc-search">
+            <div class="opc-search" (click)="ShowInputNumber()">
                 <img class="btn-img-name arrow" src="../../../assets/img/Arrow.png" alt="">
                 <p>number</p>
             </div>
+            <div [hidden]="true" id="name_pokemon" class="name_pokemon">
+                <p>Insert Name:</p>
+                <input #name_pokemon type="text" placeholder="....">
+            </div>
+            <div [hidden]="true" id="id_pokemon" class="id_pokemon">
+                <p>Insert Number:</p>
+                <input #number_pokemon type="text" max="898" min="1" placeholder="....">
+            </div>
+            <div [hidden]="true" id="btn-search">
+                <button (click)="ShowInfoPokemon(number_pokemon.value || name_pokemon.value)" type="button">Search</button>
+            </div>
         </div>
-        <div>
-
+        <div [hidden]="true" id="info-pokemon" class="info-pokemon">
+            <p id="tittle-name-pk"></p>
+            <img id="pokemon-photo" class="pokemon-photo" src="" alt="Image Pokemon">
+            <div></div>
         </div>
     </section>
 </section>

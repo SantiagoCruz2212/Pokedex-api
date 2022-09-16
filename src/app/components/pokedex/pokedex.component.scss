@@ -20,6 +20,19 @@
     font-family: 'Silkscreen', cursive;
     font-size: 14px;
 }
+.cntr-text input{
+    font-family: 'Silkscreen', cursive;
+}
+.cntr-text button{
+    background-color: transparent;
+    margin-left: 12px;
+    border: none;
+    transition: 200ms;
+}
+.search button:hover{
+    color: #00ef41;
+    transition: 200ms;
+}
 .arrow{
     margin-left: 3px;
     width: 5px;
@@ -84,6 +97,9 @@
     text-shadow: 2px 5px 4px rgba(0, 0, 0, 1);
     transition: 400ms;
 }
+.pokemon-photo{
+    width: 200px;
+}
 @keyframes press {
     0%{
         opacity: 40%;
@@ -97,4 +113,9 @@
 }
 .pokedex-closed, .pokedex-up, .pokedex-down{
     width: 350px;
+}
+.name_pokemon input, .id_pokemon input{
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
